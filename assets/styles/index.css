@@ -1,0 +1,121 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,700);
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #a98383;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+header {
+  padding: 20;
+}
+h1 {
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  justify-content: center;
+  display: flex;
+  margin: 20px;
+}
+
+.punto {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgb(255, 255, 255);
+}
+
+p {
+  font-weight: 300;
+}
+a {
+  color: gray;
+}
+/***********- TAREA  -*********/
+
+section {
+  display: flex;
+  justify-content: center; /*para centar la seccion con respecto al eje pricipal que row */
+  flex-wrap: wrap; /*los elementos hijos son obligados a fluir a varias lineas dependiendo del contenedor */
+}
+
+[class^='cara-'] {
+  /*aplicar estilos a todas las cara (sintasis para aplicar a todas las caras [ class^='cara-' ]*/
+  display: flex; /*nos permite maquetar la pagina mucho mas facil y usar sus propiedades como justify content i align-items */
+  margin: 1em;
+  width: 150px;
+  height: 150px;
+  padding: 15px;
+  background: #ac726a;
+  border-radius: 10%;
+  box-shadow: 0 0 20px #7d3a3a;
+
+  /*cuadramos el tamano del contendeor (altura ,ancho ,borde) */
+}
+
+.cara-uno {
+  /* punto en el centro */
+  justify-content: center; /* centra el elemento de manera horizontal (eje primcipal row) */
+  align-items: center; /* centra el elemento de manera vertical (eje primcipal row) */
+}
+
+.cara-dos {
+  /*puntos en los extremos */
+  justify-content: space-between; /*deja espacio entre los elememtos teniendo encuenta el tamano del contenedor padre de manera equitativa */
+}
+.cara-dos .punto:nth-child(2) {
+  /*para especificar que voy a escoger el segundo elemento llamado punto del contenedor  */
+  align-self: flex-end; /*alinea de manera vertical al final container (eje:row) */
+}
+
+.cara-tres {
+  /*puntos en los extremos y en el centro */
+  justify-content: space-between; /*deja espacio entre los elememtos teniendo encuenta el tamano del contenedor padre  de manera equitativa */
+}
+
+.cara-tres .punto:nth-child(2) {
+  /* especifico el segundo elemento del contenedor llamado punto, es el unico que se va a modificar */
+  align-self: center; /* alinar de manera vertical en centro teniendo en cuenta el  contenedor eje principal row */
+}
+
+.cara-tres .punto:nth-child(3) {
+  /*para especificar que voy a escoger el tercer elemento llamado punto del contenedor  */
+  align-self: flex-end; /*alinea de manera vertical al final container (eje:row) */
+}
+
+.cara-cuatro {
+  justify-content: space-between; /*deja espacio entre los elememtos teniendo encuenta el tamano del contenedor padre */
+}
+.cara-cuatro .columna {
+  /*puntos en todas las esquinas */
+  display: flex; /*nos permite usar las propiedades de flexbox para maquetarla mejor */
+  flex-direction: column; /*cambiamos el eje principal a colum (verticalmente) */
+  justify-content: space-between; /*deja espacio entre los elememtos teniendo encuenta el tamano del contenedor padre  de manera equitativa  (verticalmente)*/
+}
+
+.cara-cinco {
+  display: flex; /*nos permite usar las propiedades de flexbox para maquetarla mejor */
+  justify-content: space-between; /*nospermite dejar espacio manera equitativa  en el contenedor*/
+}
+
+.cara-cinco .columna {
+  /*puntos en todas las esquinas */
+  display: flex; /*nos permite maquetar la pagina mucho mas facil y usar sus propiedades como justify content i align-items */
+  flex-direction: column; /*cambia al eje principal a colum (verticalmente) */
+  justify-content: space-between; /*deja espacio entre los elememtos teniendo encuenta el tamano del contenedor padre  de manera equitativa */
+}
+.cara-cinco .medio {
+  /*punto en el medio sobrante */
+  align-self: center; /* alinar de manera central  */
+}
+.cara-seis {
+  display: flex; /*nos permite usar las propiedades de flexbox */
+  justify-content: space-between; /*deja espacio entre los elememtos teniendo encuenta el tamano del contenedor padre  de manera equitativa */
+}
+.cara-seis .columna {
+  /*3puntos en cada lado*/
+  display: flex; /*nos permite usar las propiedades de flexbox */
+  flex-direction: column; /* eje principal pasa a ser colum (verticalmente) */
+  justify-content: space-between; /*deja espacio entre los elememtos teniendo encuenta el tamano del contenedor padre  de manera equitativa */
+}

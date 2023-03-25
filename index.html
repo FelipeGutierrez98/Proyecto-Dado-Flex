@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/styles/index.css" />
+  </head>
+  <body>
+    <header> 
+      <h1>Dado hecho con flexbox</h1> <!-- Titulo -->
+    </header>
+
+    <section> <!-- seccion el cual va a tener todos los dados -->
+      <div class="cara-uno"> <!-- container el cual va a tener dentro un texto -->
+        <span class="punto"></span> <!-- manera de escribir texto (para modificar un parte del texto y agregar estilos) -->
+      </div>
+
+      <div class="cara-dos"> <!-- container el cual va a tener dentro dos span -->
+        <span class="punto"></span>
+        <span class="punto"></span>
+      </div>
+      <div class="tres-puntos"> <!-- container el cual va a tener dentro tres span -->
+        <div class="cara-tres"> <!-- para realizar el flex a los elemtos hijos -->
+			<span class="punto"></span>
+			<span class="punto"></span>
+			<span class="punto"></span>
+		</div>
+      </div>
+      <div class="cara-cuatro"> <!-- container el cual va a tener 2 contenedores el cual cada uno de estos tendra dos elemetos hijos(span) -->
+        <div class="columna"> <!-- se aplicara el flex para quedar en columna -->
+            <span class="punto"></span>
+            <span class="punto"></span>
+        </div>
+        <div class="columna"> <!-- se aplicara el flex para quedar en columna -->
+            <span class="punto"></span>
+            <span class="punto"></span>
+        </div>
+    </div>
+    <div class="cara-cinco"> <!-- container el cual va a tener elemetos -->
+        <div class="columna"> <!-- se aplicara elflex para quedar en columna -->
+            <span class="punto"></span>
+            <span class="punto"></span>
+        </div>
+        <span class="punto medio"></span><!--  unico elemto separado para que solo cumpla el estilo este elemento  -->
+        <div class="columna"> <!-- se aplicara elflex para quedar en columna -->
+            <span class="punto"></span>
+            <span class="punto"></span>
+        </div>
+    </div>
+    <div class="cara-seis"> <!-- container el cual va a tener 2 contenedores el cual cada uno de estos tendra tres elemetos hijos(span) -->
+        <div class="columna"> <!-- se aplicara el flex al padre para que los hijos queden columna -->
+            <span class="punto"></span>
+            <span class="punto"></span>
+            <span class="punto"></span>
+        </div>
+        <div class="columna"> <!-- se aplicara elflex para quedar en columna -->
+            <span class="punto"></span>
+            <span class="punto"></span>
+            <span class="punto"></span>
+        </div>
+    </div>
+    </section>
+  </body>
+</html>
